@@ -44,18 +44,11 @@ No native SQLite rebuild is required.
 
 ## Local OAuth callback
 
-For the simplest local flow, use HTTP:
+The app now uses a fixed local callback URL for the simple flow:
 
 ```text
 http://localhost:3443/oauth/twitch/callback
 ```
-
-Set in app settings:
-
-- `OAuth redirect protocol` = `http`
-- `OAuth redirect host` = `localhost`
-- `OAuth redirect port` = `3443`
-- `OAuth redirect path` = `/oauth/twitch/callback`
 
 Register that exact URL in Twitch, then click `Start OAuth`.
 
@@ -72,13 +65,10 @@ Then fill these app settings:
 
 - `Twitch client ID`
 - `Twitch client secret`
-- `OAuth redirect protocol` = `https`
 - `mkcert cert path`
 - `mkcert key path`
-- `OAuth scopes`
-- `OAuth redirect host`, `port`, and `path`
 
-The app shows the exact redirect URL that must be registered in Twitch, for example:
+If you later re-enable HTTPS in code/config, the redirect URL to register in Twitch is, for example:
 
 ```text
 https://localhost:3443/oauth/twitch/callback
@@ -127,6 +117,44 @@ After building, you can launch Electron against the production renderer with:
 
 ```bash
 npm start
+```
+
+## Build a Windows `.exe`
+
+Generate the Windows installer locally with:
+
+```bash
+npm run dist:win
+```
+
+This writes the installer to:
+
+- `release/Twitch Orders Collector-Setup-<version>.exe`
+
+The current build also produces:
+
+- `release/win-unpacked/`
+- `release/latest.yml`
+- `release/*.blockmap`
+
+## Automated GitHub Release builds
+
+The repository now includes a GitHub Actions workflow at:
+
+- `.github/workflows/release.yml`
+
+It automatically:
+
+1. runs on pushed tags like `v0.1.0`
+2. builds the Windows installer on `windows-latest`
+3. creates the GitHub Release if needed
+4. uploads the generated `.exe` asset to that release
+
+To trigger it, create and push a tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
 ```
 
 ## Local data

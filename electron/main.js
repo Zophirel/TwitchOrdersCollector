@@ -13,6 +13,7 @@ const { MkcertService } = require('../core/services/mkcertService');
 const { normalizeRequestedText } = require('../core/utils/normalization');
 
 const isDev = Boolean(process.env.VITE_DEV_SERVER_URL);
+app.setAppUserModelId('com.franc.twitchorderscollector');
 let mainWindow;
 let botClient;
 let settingsRepository;
