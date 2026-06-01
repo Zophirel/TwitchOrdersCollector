@@ -1,0 +1,56 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: #ebf0f6;
+  background: #0d1117;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #0d1117;
+  --bg-elevated: #151b23;
+  --bg-panel: #1b2530;
+  --bg-panel-soft: #1f2b37;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #ebf0f6;
+  --text-muted: #95a5b7;
+  --accent: #62c4ff;
+  --accent-strong: #2da1f8;
+  --success: #47c27d;
+  --warning: #f5b74a;
+  --danger: #ef6b73;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top right, rgba(98, 196, 255, 0.16), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(51, 92, 160, 0.18), transparent 26%),
+    var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
