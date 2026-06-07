@@ -1,7 +1,12 @@
 # Twitch Orders Collector
+## Overview
+<img width="1458" height="892" alt="image" src="https://github.com/user-attachments/assets/2174c48d-e891-4a2f-8939-8bdadcb0db7c" />
+
+<img width="1446" height="899" alt="image" src="https://github.com/user-attachments/assets/2c703681-10e2-4453-8ad1-636d992e7cea" />
+
+
 
 ## Requirements
-
 - A Twitch bot account 
 
 ## Installation
