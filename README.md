@@ -32,4 +32,4 @@ Create or use your personal account as bot:
   <img width="1099" height="185" alt="image" src="https://github.com/user-attachments/assets/6c971733-441e-4368-883a-977dadd6836e" />
 
 ## Usage
-After setting up the bot and the keywords the user has to request the article by using `!reqeuest <object name>` like `!request Onepiece luffy` and to confirm the request `!order onepiece luffy 20` like
+After setting up the bot and the keywords the user has to request the article by using `!reqeuest <object name>` like `!request Onepiece luffy` and to confirm the request `!order <object name> <price>` like `!order onepiece luffy 20`
