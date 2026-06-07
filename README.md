@@ -7,7 +7,7 @@
 ## Installation
 Create or use your personal account as bot:
 - Go to https://dev.twitch.tv/
-- Sign up or log in
+- Sign up or log in (you can use a new dedicated account no need to use the main account)
 - Go to Applications
   - <img width="248" height="318" alt="image" src="https://github.com/user-attachments/assets/53756ab7-0c29-480c-81ac-113fa41e7af9" />
 - Register your application
